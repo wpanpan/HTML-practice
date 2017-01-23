@@ -1,0 +1,123 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title>
+		</title>
+	</head>
+	<body>
+		<div>
+			<div id="div-1" style="
+			position:absolute;
+			top:200px;
+			left:200px;
+			background:pink;
+			width:500px;
+			height:400px;
+			border:1px;
+			border-color:black;
+			padding:10px;
+			line-height:400px;
+			text-align:center;
+			font-size:40px;
+			font-color:red;
+			font-family:隶书;
+			overflow:auto;
+			cursor:pointer;
+			z-index:5;
+			">
+			新年快乐happy new year!
+			</div>
+			<div id="div-2" style="
+			position:absolute;
+			top:100px;
+			left:100px;
+			background:yellow;
+			width:500px;
+			height:400px;
+			border:1px;
+			border-color:black;
+			padding:10px;
+			line-height:400px;
+			text-align:center;
+			font-size:40px;
+			font-color:red;
+			font-family:隶书;
+			overflow:auto;
+			cursor:pointer;
+			z-index:1;
+			">
+			新春快乐！O(∩_∩)O哈哈~
+			</div>
+		</div>	
+	</body>
+</html>
+<script>
+//JS 数字部分
+	a=(12+9)%6;
+	b=Math.ceil(5.2343);
+	c=Math.round(10.932);
+	d=Math.floor(54.922);
+	document.title=a;
+	alert('这是一个提醒框');
+	alert('Math.ceil表示有小数就加一,不管小数部分多小：b='+b);
+	alert('Math.round取整函数，表示四舍五入：c='+c);
+	alert('Math.floor取整函数，表示舍去小数部分，不管小数部分多大：d='+d);
+	alert('Math.random产生(0,1)的随机数，＞0小于1, '+Math.random());
+	alert(Math.floor(Math.random()*5)+1);
+	alert('求最大值最小值以及绝对值函数'+Math.min(0,3,5,-1)+','+Math.max(3,5,8.8)+','+Math.abs(-90.4));
+//JS 字符串部分
+	alert('这是一个字符串，'+'通过+号将每个字符串之间连接起来显示在屏幕上,单、双引号均可');
+	str="abcdefghijklmn";
+	alert('求某段字符串中某个子串（首个字符的下标）或单个字符的下标'+str.indexOf('ef'));
+	alert('取出字符串中某段子字符，包含3不包含下标为7的字符'+str.substring(3,7));
+	alert(str.length);
+//JS array数组
+	ar=[1,2,3,4,5];
+	br=[34,'g','tr',54,3];
+	alert('数组中可以包含字符串：'+br);
+	//ar=ar.shift();是错误的
+	ar.shift();
+	alert('数组首部删除一个元素 '+ar);
+	ar.unshift(2);
+	alert('数组首部添加一个自己设定的“1”'+ar);
+	ar.push(88);
+	alert('数组尾部添加一个自己设定的“88”'+ar);
+	ar.pop();
+	alert('数组尾部删除一个'+ar);
+	alert('ar数组原来是：'+ar);
+	ar.splice(2,2,1,2,3,3,3);
+	alert('函数splice括号中分别表示从下标几开始，删除几个，添加什么元素(1,2,3,3,3)'+ar);
+	cc=ar.concat(br);
+	alert('连接两个数组的函数concat'+cc);
+//JS object对象
+	a={
+	a:1,
+	b1:2,
+	c:"haha",
+	d:['s',21,4],
+	e:{
+		e1:{
+		e2:[1,3]
+			}
+		}
+	};
+	document.title=a.a;
+//alert(a[e][e1][e2])不可以,这时的e,e1,e2是变量，这样写的话就显示没有定义出错，而以下写法是对的;
+	alert(a['e']['e1']['e2']);
+	alert(a.e.e1.e2);
+	alert(a.c);
+	alert(a.b1);
+//表示删除对象a中的b1成员；
+	delete a['b'+1];
+	alert(a.b1);
+//JS function函数
+	//第一种写法(标准写法)
+		function fn(a)
+		{ return a+2;
+		}
+		document.title=fn(4)+fn(2);
+	//第二种写法
+		fn=function(a)
+		{
+		document.title=fn(5.5);
+</script>
